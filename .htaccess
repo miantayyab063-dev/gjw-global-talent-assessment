@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(config\.php|config\.example\.php|schema\.sql|README\.md|.*\.log)$ - [F,L,NC]
+<FilesMatch "\.(sql|ini|env|bak|log)$">
+ Require all denied
+</FilesMatch>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+
+RewriteRule ^(bootstrap_admin\.php|vendor/|tests/|storage/|.*(?:_policy|_parser|_service)\.php) - [F,L,NC]
+
+RewriteRule ^(app_config\.php|cleanup_retention\.php|assets/bank-qr\.(png|jpg))$ - [F,L,NC]

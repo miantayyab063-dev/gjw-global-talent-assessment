@@ -1,0 +1,53 @@
+:root{--bg:#f3f6fa;--ink:#13233e;--muted:#64748b;--navy:#0b2242;--green:#0f9c7d;--gold:#d6a44a;--border:#dde6ef}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,'Segoe UI',Arial,sans-serif}a{color:#087f75;text-decoration:none}header{background:var(--navy);color:#fff;padding:17px max(22px,calc((100vw - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}header a{color:#fff;margin-left:14px}main{max-width:1160px;margin:28px auto;padding:0 18px}.hero{background:linear-gradient(120deg,#0b2242,#12625a);color:white;border-radius:24px;padding:48px 36px}.hero h1{font-size:clamp(30px,4vw,54px);margin:0 0 10px}.hero p{max-width:620px;color:#dcebe9;font-size:18px}.btn,button{display:inline-block;padding:11px 19px;border:0;border-radius:10px;background:var(--green);color:white;font-weight:650;cursor:pointer;font-size:15px}.btn.secondary,button.secondary{background:var(--navy)}.btn.outline{background:white;color:var(--navy)}.card{background:white;border:1px solid var(--border);border-radius:17px;padding:24px;margin:16px 0;box-shadow:0 6px 24px #13233e08}.layout{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.layout .card{margin:0}.muted{color:var(--muted)}input,select,textarea{display:block;width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:11px;margin:6px 0 15px;font:inherit;background:#fff;color:var(--ink)}textarea{min-height:110px}label{font-size:14px;font-weight:600}h1,h2,h3{line-height:1.18}h2{margin-top:0}.pill{display:inline-block;background:#e1f6ef;color:#075e4d;padding:6px 12px;border-radius:22px;font-size:13px}.alert{padding:13px 16px;border-radius:9px;background:#fff1d4;color:#624212;margin-bottom:15px}.ok{background:#e0f6eb;color:#165f45}.progress{height:8px;background:#e1e7f0;border-radius:12px;overflow:hidden;margin:18px 0}.progress span{display:block;height:100%;background:var(--green)}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}td{overflow-wrap:anywhere}.scroll{overflow-x:auto}.timer{font-size:44px;font-weight:800;letter-spacing:1px;color:#12625a}.stat{font-size:32px;font-weight:800;color:var(--navy)}.tag{color:#8d6e1f}video{max-width:100%;background:#172238;border-radius:12px}fieldset{border:1px solid var(--border);padding:14px;border-radius:12px;margin:15px 0}legend{font-weight:700}small{color:var(--muted)}.rtl{direction:rtl}footer{padding:35px;text-align:center;color:var(--muted)}@media(max-width:650px){header{padding:16px}main{margin:14px auto}.hero{padding:32px 22px}.card{padding:17px}}
+.logout-btn{background:transparent;border:1px solid rgba(120,130,140,.4);color:inherit;padding:7px 12px;border-radius:8px;cursor:pointer}
+#draftStatus{display:inline-block;margin-left:12px;opacity:.8}
+#registrationTimer {font-variant-numeric:tabular-nums;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;letter-spacing:.03em}
+#registrationTimer.late{color:#a83b32}
+.camera-overlay{position:fixed;inset:0;z-index:9999;background:rgba(5,13,28,.88);display:grid;place-items:center;padding:16px;overflow:auto}
+.camera-dialog{background:#fff;color:#162334;max-width:560px;width:100%;max-height:95vh;overflow:auto;padding:20px;border-radius:14px;text-align:center}
+.camera-dialog video,.camera-dialog img{width:100%;max-height:60vh;object-fit:contain;border-radius:9px;background:#122}
+.camera-dialog button{margin:7px}
+
+/* Portal theme */
+:root {
+  color-scheme: dark;
+  --bg: #100b1d;
+  --ink: #f7f1ff;
+  --muted: #c2b4d3;
+  --navy: #211633;
+  --green: #9a70fa;
+  --border: #46345e;
+}
+body { background: radial-gradient(ellipse at 65% 0, #24133c, transparent 65%), var(--bg); }
+a { color: #d8c1ff; }
+header { background: #160e24; border-bottom: 1px solid var(--border); }
+header nav { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+header a { margin: 0; }
+.brand { display: inline-flex; gap: 10px; align-items: center; font-size: 1.1rem; font-weight: 750; }
+.brand span, .step-icon { color: #e0cdff; background: #392355; border: 1px solid #62418b; border-radius: 11px; display: inline-grid; place-items: center; width: 39px; height: 39px; }
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; position: relative; isolation: isolate; overflow: hidden; padding: clamp(26px, 5vw, 64px); min-height: 430px; border: 1px solid #604480; background: radial-gradient(ellipse at 76% 45%, #6844a3, transparent 62%), linear-gradient(120deg,#211137,#382258); }
+.hero-copy { position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(2.2rem, 5.1vw, 4.65rem); line-height: 1; letter-spacing: -.055em; margin: 18px 0; }
+.hero h1 em { color: #d9bcff; font-style: normal; }
+.hero p { color: #e0d3ef; max-width: 42ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+.hero-art { align-self: stretch; position: relative; min-width: 0; }
+.hero-art img { position: absolute; inset: auto -22% -70px; width: 138%; height: auto; max-height: 490px; object-fit: contain; object-position: bottom; }
+.pill { background: #392451; color: #f0e0ff; border: 1px solid #68478e; }
+.btn, button { background: #9866f0; color: #140925; border-radius: 12px; padding: 11px 16px; }
+.btn:hover, button:hover { filter: brightness(1.16); }
+.btn.secondary, button.secondary, .btn.outline, .logout-btn { background: #2b1b42; color: var(--ink); border: 1px solid #745899; }
+button:disabled { opacity: .55; cursor: default; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #efddff; outline-offset: 3px; }
+.card { background: #1e142f; box-shadow: 0 12px 35px #07030f55; }
+.portal-steps { margin-top: 34px; }
+.portal-steps .card p { color: var(--muted); margin-bottom: 0; }
+input, select, textarea { background: #160e24; border-color: #624a80; }
+.timer, .stat, .tag { color: #dcc3ff; }
+.progress { background: #382650; }
+.camera-dialog { background: #211633; color: var(--ink); }
+@media (max-width: 780px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 0; }
+  .hero-art { height: clamp(185px, 55vw, 310px); margin-top: 12px; }
+  .hero-art img { inset: auto 0 0; width: 100%; max-height: 100%; }
+}
